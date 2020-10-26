@@ -116,7 +116,6 @@ h1, h2, h3, h4, h5 {
 .clearfix {
     clear: both;
 }
-
 /* margin */
 .m_5 {
     margin: 5px;
@@ -252,6 +251,11 @@ h1, h2, h3, h4, h5 {
 .p_tb5 {
     padding: 5px 0;
 }
+.p_lr3{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 .p_lr5 {
     padding: 0 5px;
 }
