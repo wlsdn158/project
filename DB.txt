@@ -22,13 +22,13 @@ emp_position		// 직책코드 Join kind_position
 emp_num			// 사원번호 (계산필요)
 emp_enter		// 입사년월일
 emp_name		// 사원이름
-emp_birth		// 생년월일
+emp_birth			// 생년월일
 emp_password		// 초기비밀번호(default : 생년월일 yymmdd 6자리)
 emp_email		// 이메일주소
 emp_regdate Date		// erp 회원가입일
 emp_headcheck		// 부서장여부(*)
 emp_step			// 호봉
-emp_auth		// 권한
+emp_auth			// 권한
 emp_confirm		// 승인여부
 emp_photo		// 사진경로 (추후)
 );
