@@ -1,0 +1,173 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul li{
+    list-style: none;
+}
+
+header{
+     background-color: #2D71C4;
+     
+}
+
+.login{
+    background-color: rgba(0,0,0,0.3);
+    
+    padding-left: 1190px;
+    height: 35px;
+    display: flex;
+    line-height: 35px;
+    
+}
+
+.login p a{
+    margin-right: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.icon-login {
+    display: flex;
+}
+
+.icon-login i{
+    line-height: 35px;
+    margin-right: 3px;
+    color: #fff;
+}
+
+.header-wrap{
+    display: flex; 
+    height: 60px;
+
+}
+
+.logo{
+    width: 25%;
+    line-height: 60px;
+}
+
+.logo h1{
+    color: #fff;
+    text-align: right;
+}
+
+.topmenu{
+    width: 70%;
+    padding-right: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+    line-height: 60px;
+}
+
+.topmenu ul{
+    position: relative;
+   
+}
+
+.topmenu ul p{
+    
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    
+}
+
+.topmenu ul li{
+    width: 120px;
+    margin-left: -30px;
+    line-height: 2;
+    text-align: center;
+    cursor: pointer;  
+    display: none;
+}
+
+.top-wrap{
+    position: absolute;
+    margin-top: 10px;
+
+   
+}
+
+.mline{
+    border-right: 2px solid #eee;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.main-wrap{
+    display: flex;
+}
+
+.menu{
+    border-right: 1px solid #ccc;
+    width: 15%;
+    height: 100vh;
+    line-height: 1.8;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+
+.tab{
+    width: 110px;
+    height: 35px;
+    margin-bottom: 10px;
+    float: left;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    line-height: 35px;
+    background-color: #fff;
+}
+
+.content{
+    width: 85%;
+    height: 100vh;
+    padding:10px;
+}
+
+.copy-box{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 80px;
+    padding: 25px 400px;
+    background-color: #eee;
+}
+
+.copy-box .copy{
+    font-weight: 700;
+}
+
+.gnb{
+    float: right;
+}
+
+.gnb ul{
+    display: flex;
+}
+
+.gnb ul li{
+    margin-left: 80px;
+  
+}
+
+.gnb ul li a{
+    color: #747474
+}
+
