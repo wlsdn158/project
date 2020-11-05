@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/button_style.css">
+    <link rel="stylesheet" href="../../css/board.css">
+    <link rel="stylesheet" href="../../css/employee.css">
+   
+  
+
+    <!-- FontAweSome -->
+    <script src="https://kit.fontawesome.com/5990def7eb.js" crossorigin="anonymous"></script>
+    <!-- FontAweSome -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JQuery -->
+
+    <script src="../../ckeditor/ckeditor.js"></script>
+
+</head>
+<style>
+   .left_radius_btn {
+    background-color: #9eacc6;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 6px 5px;
+    
+    }
+    .right_radius_btn {
+    background-color: #ededed;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 6px 5px;
+    
+    }
+
+    tr:first-child {
+         background-color:#063f8a;
+    }
+
+    .tr-even {
+        background-color:#eff3f9;
+    }
+
+    .page{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    cursor: pointer;
+    }
+
+    .page-active{
+    background-color: #3f51b5;
+    border: 1px solid transparent;;
+    }
+
+
+    .control_menu {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    .main_left_menu {
+        width: 50px;
+    }
+    .left_menu_icon {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    .menu_selected {
+        background-color: #fff;
+        color: #3F51B5;
+    }
+    .menu_hide {
+        display: none;
+    }
+    .menu_active {
+        display: block;
+    }
+    .submenu_box {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 170px;
+        height: 80%;
+        color: #000;
+        border-right: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    .member_left {
+            /*사진*/
+            width: 11%;
+            max-width: 192px;
+        }
+
+        .photo_area {
+            width: 100%;
+        }
+
+        .photo_area img {
+            width: 100%;
+            height: 240px;
+            display: inline-block;
+        }
+
+        .member_right {
+            /*내용*/
+            width: 88.7%;
+            max-width: 1728px;
+        }
+
+        .cke_style{
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 2px;
+        }
+</style>
+<body>
+    <div class="page_wrap bg_white noto font_14" style="height: 100vh;">
+        <div class="page_top flex space_between">
+            <div class="top_left bg_blue_1">
+                <div id="mainmenu_btn" class="control_menu font_16 white center flex flex_hc flex_vc">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="top_middle bg_blue_2 font_16 flex flex_hc flex_vc" style="width: 10%;">
+                <span class="white">ADMINISTRATOR</span>
+            </div>
+            <div class="top_right bg_blue_3 p_10" style="width: 100%;">
+                <div class="top_right_menu flex" style="justify-content: flex-end;">
+                    <div class="top_right_menu_one white" style="line-height: 30px;"><i
+                            class="fas fa-store"></i></div>
+                    <div class="top_right_menu_two white m_lr20" style="line-height: 30px;"><i
+                            class="fas fa-home"></i></div>
+                    <!-- <div class="top_right_menu_three">
+                        <button class="m_l10 white"
+                            style="display: inline-block; padding: 5px 10px; margin-left: 10px; border-radius: 3px; height: 30px;  color: #fff; background-color: rgba(250, 250, 250, 0.1);">
+                            부가서비스
+                        </button>
+                    </div> -->
+                    <div class="top_right_menu_four">
+                        <select class="white" style="background-color: rgba(250, 250, 250, 0.1); height: 30px;">
+                            <option class="bg_blue_4">관리자</option>
+                            <option class="bg_blue_4">관리자정보</option>
+                            <option class="bg_blue_4">로그아웃</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_main flex space_between" style="border-bottom: 1px solid #ccc;">
+            <div class="main_left flex space_between" style="width: 50px;">
+                <div class="main_left_menu bg_ivory">
+
+                    <!-- FLOAT로 띄워서 버튼 JQUERY로 show&hide -->
+                    <div class="left_menu_icon font_16 flex flex_vc flex_hc" style="border-bottom: 1px solid #ccc;">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div id="submenu_box" class="submenu_box menu_hide main_left_menu_sub p_20">
+                        <h4 class="menu_title m_b15">1번메뉴</h4>
+                        <ul class="font_12">
+                            <li class="m_b10">서브메뉴1</li>
+                            <li class="m_b10">서브메뉴2</li>
+                            <li class="m_b10">서브메뉴3</li>
+                            <li class="m_b10">서브메뉴4</li>
+                        </ul>
+                    </div>
+                    <div class="left_menu_icon font_16 flex flex_vc flex_hc" style="border-bottom: 1px solid #ccc;">
+                        <i class="fas fa-user-alt"></i>
+                    </div>
+                    <div class="submenu_box menu_hide main_left_menu_sub p_20">
+                        <h4 class="menu_title m_b15">2번메뉴</h4>
+                        <ul class="font_12">
+                            <li class="m_b10">서브메뉴1</li>
+                            <li class="m_b10">서브메뉴2</li>
+                            <li class="m_b10">서브메뉴3</li>
+                            <li class="m_b10">서브메뉴4</li>
+                            <li class="m_b10">서브메뉴5</li>
+                        </ul>
+                    </div>
+                    <div class="left_menu_icon font_16 flex flex_vc flex_hc" style="border-bottom: 1px solid #ccc;">
+                        <i class="fas fa-user-alt"></i>
+                    </div>
+                    <div class="submenu_box menu_hide main_left_menu_sub p_20">
+                        <h4 class="menu_title m_b15">3번메뉴</h4>
+                        <ul class="font_12">
+                            <li class="m_b10">서브메뉴1</li>
+                            <li class="m_b10">서브메뉴2</li>
+                            <li class="m_b10">서브메뉴3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="main_right bg_white" style="width: 100%;">
+                <div class="main_right_title p_10" style="height: 50px; border-bottom: 1px solid #ccc;">
+                    <h2>main_right_title</h2>
+                </div>
+                <div class="main_right_info p_20">
+                    <div class="info_title m_b10">
+                        게시글 관리
+                    </div>
+                    <div class="flex space_between m_b10">
+                        <div class="p_t10">
+                            <div class="employee_count_btn_grp flex">
+                                <div class="font_12 left_radius_btn white">총회원수</div>
+                                <div class="font_12 right_radius_btn">123명</div>
+                            </div>
+                        </div>
+                        <div class="info_table">
+                            <div class="page_content ">
+                                <form action="" name="" method="">
+                                    <select class="" name="searchOpt">
+                                        <option value="subject">게시물제목</option>
+                                        <option value="writer">작성자</option>
+                                        <option value="all">제목+작성자</option>
+                                    </select>
+                                    <input type="text" name="words" required style="margin-left:-2px" />
+                                    <button type="submit" class="btn-blue" style="margin-left:-2px">게시글검색</button>
+                                    
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-wrap bg-white flex">
+                        <table class="emp_info_tbl center">
+                            <tr class="weight700 center bg_blue_5 white font14">
+                                <td class="td_3">
+                                    <input type="checkbox" />
+                                </td>
+                                <td class="td_5">번호</td>
+                                <td class="td_5">분류</td>
+                                <td>게시물제목</td>
+                                <td class="td_7">작성자</td>
+                                <td class="td_7">조회</td>
+                                <td class="td_8">날짜</td>
+                                <td class="td_7">관리</td>
+                            </tr>
+                            <tr class="center font14">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>5</td>
+                                <td>일반</td>
+                                <td class="p_lr10">
+                                    <a href="grp_board_view.html" class="under weight700 float_l">게시물 등록 테스트입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>17</td>
+                                <td>2020.11.01</td>
+                                <td>
+                                    <button type="button" class="s-btn-blue " onClick="location.href='grp_board_modify.html?id=10'">수정</button>
+                                    <button type="button" class="s-btn-ivory">삭제</button>
+                                </td>
+                            </tr>
+                            <tr class="center font14">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>4</td>
+                                <td>일반</td>
+                                <td class="p_lr10">
+                                    <a href="grp_board_view.html" class="under weight700 float_l">게시물 등록 테스트입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>73</td>
+                                <td>2020.10.23</td>
+                                <td>
+                                    <button type="button" class="s-btn-blue " onClick="location.href='grp_board_modify.html?id=10'">수정</button>
+                                    <button type="button" class="s-btn-ivory">삭제</button>
+                                </td>
+                            </tr>
+                            <tr class="center font14">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>3</td>
+                                <td>일반</td>
+                                <td class="p_lr10">
+                                    <a href="grp_board_view.html" class="under weight700 float_l">게시물 등록 테스트입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>58</td>
+                                <td>2020.10.21</td>
+                                <td>
+                                    <button type="button" class="s-btn-blue " onClick="location.href='grp_board_modify.html?id=10'">수정</button>
+                                    <button type="button" class="s-btn-ivory">삭제</button>
+                                </td>
+                            </tr>
+                            <tr class="center font14">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>2</td>
+                                <td>일반</td>
+                                <td class="p_lr10">
+                                    <a href="grp_board_view.html" class="under weight700 float_l">게시물 등록 테스트입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>42</td>
+                                <td>2020.10.11</td>
+                                <td>
+                                    <button type="button" class="s-btn-blue " onClick="location.href='grp_board_modify.html?id=10'">수정</button>
+                                    <button type="button" class="s-btn-ivory">삭제</button>
+                                </td>
+                            </tr>
+                            <tr class="center font14">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td>1</td>
+                                <td>일반</td>
+                                <td class="p_lr10">
+                                    <a href="grp_board_view.html" class="under weight700 float_l">게시물 등록 테스트입니다.</a>
+                                </td>
+                                <td>관리자</td>
+                                <td>142</td>
+                                <td>2020.09.09</td>
+                                <td>
+                                    <button type="button" class="s-btn-blue " onClick="location.href='grp_board_modify.html?id=10'">수정</button>
+                                    <button type="button" class="s-btn-ivory">삭제</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="page-grp center p_tb10 ">
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    </span>
+                    <span class="page ">
+                        <a href=""><i class="fas fa-angle-left"></i></a>
+                    </span>
+                    <span class="page page-active"><a class="f6" href="">1</a></span>
+                    <span class="page"><a href="">2</a></span>
+                    <span class="page"><a href="">3</a></span>
+                    <span class="page"><a href="">4</a></span>
+                    <span class="page"><a href="">5</a></span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-right"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-right"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright center">
+            <span class="copy"> &copy;Copyright All rights reserved.</span>
+            <span class="history">2020 - 2030</span>
+        </div>
+    </footer>
+    <div class="clearfix"></div>
+    
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(2n+1)").addClass("tr-even");
+    })
+</script>
+<script>
+    $(function() {
+        $(".left_menu_icon").click(function() {
+            $(this).next().toggleClass("menu_hide");
+            $(this).toggleClass("menu_selected");
+        });
+        $("#mainmenu_btn").click(function() {
+            $("#submenu_box").toggleClass("menu_hide");
+        });
+    });
+</script> 
+</html>
