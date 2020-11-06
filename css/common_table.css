@@ -7,8 +7,14 @@
 .td_3{
     width: 3%;
 }
+.td_4{
+    width: 4%;
+}
 .td_5{
     width: 5%;
+}
+.td_6{
+    width: 6%;
 }
 .td_7{
     width: 7%;
@@ -30,6 +36,9 @@
 }
 .td_20{
     width: 20%;
+}
+.td_33{
+    width: 33.3%;
 }
 .td_40{
     width: 40%;
