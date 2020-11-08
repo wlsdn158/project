@@ -21,17 +21,17 @@ input {
     vertical-align: top;
     padding-left: 10px;
 }
-.btn-blue {
+.btn_blue {
     background-color: #3f51b5;
     border: 1px solid transparent;
     font-size: 12px;
     color: #fff;
 }
-.btn-ivory {
+.btn_ivory {
     background-color: #e7e7e7;
     font-size: 12px;
 }
-.btn-red {
+.btn_red {
     background-color: crimson;
     border: 1px solid transparent;
     font-size: 12px;
@@ -39,7 +39,7 @@ input {
 }
 
 /* s-btn */
-.s-btn-blue {
+.s_btn_blue {
     width: 35px;
     height: 25px;
     background-color: #3f51b5;
@@ -47,13 +47,13 @@ input {
     font-size: 12px;
     color: #fff;
 }
-.s-btn-ivory {
+.s_btn_ivory {
     width: 35px;
     height: 25px;
     background-color: #e7e7e7;
     font-size: 12px;
 }
-.s-btn-red {
+.s_btn_red {
     width: 35px;
     height: 25px;
     background-color: crimson;
