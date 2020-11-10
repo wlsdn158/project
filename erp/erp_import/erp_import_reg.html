@@ -7,6 +7,7 @@
     <title>메인페이지</title>
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/common_table.css">
     <link rel="stylesheet" href="../../css/button_style.css">
     <link rel="stylesheet" href="../../css/table_style.css">
     <link rel="stylesheet" href="../../css/product_reg.css">
@@ -151,186 +152,162 @@
             </div>
             <div class="main_right bg_white" style="width: 100%;">
                 <div class="main_right_title p_10" style="height: 50px; border-bottom: 1px solid #ccc;">
-                    <h2 class="font_18">상품등록</h2>
+                    <h2 class="font_18">수입 품목 입력</h2>
                 </div>
                 <div class="main_right_info" style="padding: 30px 20px;">
                     <div class="product_reg">
-                        <table>
+                        <table class="m_b20">
                             <tr>
                                 <td class="bg_gray weight_700 td_10 center">품명</td>
-                                <td class="p_lr3" colspan="3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
+                                <td class="p_lr3" colspan="2">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">브랜드명</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
+                                <td class="bg_gray weight_700 td_10 center">품목코드</td>
+                                <td class="p_lr3" colspan="2">
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
                                 </td>
                                 <td class="bg_gray weight_700 td_10 center">상품그룹명</td>
                                 <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">내외자구분</td>
-                                <td class="p_lr3">
-                                    <select class="sel_100">
-                                        <option value="">내자</option>
-                                        <option value="">외자</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bg_gray weight_700 td_10 center">모델번호</td>
-                                <td class="p_lr3" colspan="3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">품목상태</td>
-                                <td class="p_lr3">
-                                    <select class="sel_100">
-                                        <option value="">사용</option>
-                                        <option value="">임시</option>
-                                        <option value="">생산중지</option>
-                                        <option value="">거래중지</option>
-                                        <option value="">폐기</option>
-                                    </select>
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">기준단위</td>
-                                <td class="p_lr3">
-                                    <select class="sel_100">
-                                        <option value="">EA</option>
-                                        <option value="">KG</option>
-                                        <option value="">SET</option>
-                                    </select>
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">구매수량</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bg_gray weight_700 td_10 center">품목코드</td>
-                                <td class="p_lr3" colspan="3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">구입처</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">발주번호</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">바코드</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="bg_gray weight_700 td_10 center">규격</td>
                                 <td class="p_lr3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
-                                </td>
-                               
-                                <td class="bg_gray weight_700 td_10 center">통화</td>
-                                <td class="p_lr3">
-                                    <select class="sel_100">
-                                        <option value="">KRW</option>
-                                        <option value="">USD</option>
-                                    </select>
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">구매단가</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">부가가치세율</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
-                                </td>
-                                <td class="bg_gray weight_700 td_10 center">부가세적용</td>
-                                <td class="p_lr3">
-                                    <input type="radio" class="input_radio"/><span class="m_lr5">적용</span>
-                                    <input type="radio" class="input_radio"/><span class="m_lr5">미적용</span>
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="bg_gray weight_700 td_10 center">보유재고</td>
-                                <td class="p_lr3">
-                                    <input type="text" name="" maxlength="20" id="" class="input_100" required />
+                                <td class="bg_gray weight_700 td_10 center">담당자</td>
+                                <td class="p_lr3" >
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">재고관리</td>
+                                <td class="bg_gray weight_700 td_10 center">직급</td>
                                 <td class="p_lr3">
-                                    <select class="sel_100">
-                                        <option value="">등록</option>
-                                        <option value="">추가</option>
-                                    </select>
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">재고위치</td>
+                                <td class="bg_gray weight_700 td_10 center">수입처</td>
                                 <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">구매일</td>
+                                <td class="bg_gray weight_700 td_10 center">수입처담당자</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">수입처연락처</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg_gray weight_700 td_10 center">수입처코드</td>
+                                <td class="p_lr3" >
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">수입일</td>
                                 <td class="search_cal p_lr3">
                                     <span>
                                         <i class="fas fa-calendar-alt"></i>
                                     </span>
                                     <input type="text" name="" maxlength="50" id="searchDate" required />
                                 </td>
-                                <td class="bg_gray weight_700 td_10 center">비고</td>
+                                <td class="bg_gray weight_700 td_10 center">수입관리번호</td>
                                 <td class="p_lr3">
-                                    <input type="text" name="" maxlength="50" id="" class="input_100" required />
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
                                 </td>
+                                <td class="bg_gray weight_700 td_10 center">P/O No.</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">배송수단</td>
+                                <td class="p_lr3">
+                                    <select class="td_100">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg_gray weight_700 td_10 center">입고창고</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="50" id="" class="td_100" required />
+                                </td>
+                               
+                                <td class="bg_gray weight_700 td_10 center">수입구분</td>
+                                <td class="p_lr3">
+                                    <select class="td_100">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">가격조건</td>
+                                <td class="p_lr3">
+                                    <select class="td_100">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center" rowspan="2" >비고</td>
+                                <td class="" rowspan="2" colspan="3">
+                                    <p><textarea cols="50" rows="5"></textarea></p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="bg_gray weight_700 td_10 center">기준단위</td>
+                                <td class="p_lr3">
+                                    <select class="td_100">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">수량</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">구매단가(원화)</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                
+                            </tr>
+                           
+                        </table>
+                        <h4>환율적용 총 금액</h4>
+                        <table class="">
+                            <tr>
+                                <td class="bg_gray weight_700 td_10 center">통화</td>
+                                <td class="p_lr3">
+                                    <select class="td_100">
+                                        <option value="">선택하세요</option>
+                                        <option value="">USD</option>
+                                        <option value="">EUR</option>
+                                        <option value="">CNY</option>
+                                        <option value="">JPY</option>
+                                        <option value="">HKD</option>
+                                    </select>
+                                </td>
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">환율</td>
+                                <td class="p_lr3">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">수입금액(외화)</td>
+                                <td class="p_lr3" colspan="2">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                <td class="bg_gray weight_700 td_10 center">수입금액(원화)</td>
+                                <td class="p_lr3" colspan="">
+                                    <input type="text" name="" maxlength="20" id="" class="td_100" required />
+                                </td>
+                                
                             </tr>
                         </table>
                         <div class="btn-grp center m_t10">
-                            <button type="submit" class="btn_blue">상품등록</button>
+                            <button type="submit" class="btn_blue">수입등록</button>
                             <button type="reset" class="btn_red">새로고침</button>
                         </div>
                     </div>
-                    <div class="product_reg_table m_t20" style="border-top: 1px solid #000;">
-                        <div class="list_comment font_12 m_tb10" style="padding: 10px 20px; background-color: #f9f9f9;">
-                            최근 등록한 <strong>10개</strong>의 상품만 보여집니다.
-                        </div>
-                        <table class="">
-                            <thead>
-                            <tr>
-                                <th>품명</th>
-                                <th >품목코드</th>
-                                <th>브랜드명</th>
-                                <th>품목상태</th>
-                                <th>기준단위</th>
-                                <th>구매수량</th>
-                                <th>통화</th>
-                                <th>구매단가</th>
-                                <th>보유재고</th>
-                                <th>구매일</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>삼성전자 갤럭시북 이온 NT950XCR-G58A</td>
-                                    <td>ABC0000000</td>
-                                    <td>삼성전자</td>
-                                    <td>사용</td>
-                                    <td>EA</td>
-                                    <td>15</td>
-                                    <td>KRW</td>
-                                    <td>1,572,620</td>
-                                    <td>120</td>
-                                    <td>2020-11-05</td>
-                                </tr>
-                                <tr>
-                                    <td>삼성전자 갤럭시북 이온 NT950XCR-G58A</td>
-                                    <td>ABC0000000</td>
-                                    <td>삼성전자</td>
-                                    <td>사용</td>
-                                    <td>EA</td>
-                                    <td>15</td>
-                                    <td>KRW</td>
-                                    <td>1,572,620</td>
-                                    <td>120</td>
-                                    <td>2020-11-05</td>
-                                </tr>
-                            </tbody> 
-                        </table>
-                    </div>
+                    
                 </div>
             </div> 
         </div>
