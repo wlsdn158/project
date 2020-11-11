@@ -1,0 +1,54 @@
+create table export_reg(
+e_id int not null auto_increment primary key
+e_name not null varchar(50),
+e_code not null varchar(30),
+e_group varchar(20),
+e_size varchar(20),
+e_PIC varchar(4) not null,
+e_PIC_position varchar(10) not null,
+e_order varchar(20) not null,
+e_order_PIC varchar(4) not null,
+e_order_phone varchar(20)not null,
+e_order_code varchar(20) not null,
+e_order_date varchar(20) not null,
+e_order_manage_code varchar(20) not null,
+e_po varchar(20),
+e_delivery varchar(30),
+e_warehouse varchar(10),
+e_division varchar(20),
+e_price varchar(20),
+e_remark varchar(100),
+e_unit varchar(20),
+e_amount varchar(10),
+e_pr varchar(10),
+e_currency varchar(10),
+);
+
+
+create table export_reg(
+e_id int not null auto_increment primary key
+e_name not null varchar(50), //품명
+e_code not null varchar(30), //품목콛,
+e_group varchar(20), //상품그룹
+e_size varchar(20),  //규격
+e_PIC varchar(4) not null,  //담당자 
+e_PIC_position varchar(10) not null,  //직급
+e_order varchar(20) not null,  수출처
+e_order_PIC varchar(4) not null,  //수출처담당자
+e_order_phone varchar(20)not null,  //수출처연락처
+e_order_code varchar(20) not null,  //수출처코드
+e_order_date varchar(20) not null,  //수출일
+e_order_manage_code varchar(20) not null,  //수출관리번호
+e_po varchar(20),  //P/0No
+e_delivery varchar(30), //배송수단
+e_warehouse varchar(10),  //입고창고
+e_division varchar(20),  //수출구분
+e_price varchar(20),  //가격조건
+e_remark varchar(100),  //비고
+e_unit varchar(20),  //기준단위
+e_amount varchar(10),  //수량
+e_pr varchar(10),  //구매단가
+e_currency varchar(10),  //통화
+e_export default 'N'		//Y를 선택하면 수출날짜입력됨
+);
+
